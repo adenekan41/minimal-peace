@@ -60,8 +60,8 @@ const NavWrapper = styled(Navbar)`
 	}
 	.custom-control-input:checked ~ .custom-control-label::before {
 		color: var(--cw) !important;
-		border-color: #e3cb1e;
-		background-color: #e3cb1e;
+		border-color: var(--token);
+		background-color: var(--token);
 	}
 	.nav-link {
 		color: var(--cw) !important;
@@ -69,7 +69,7 @@ const NavWrapper = styled(Navbar)`
 		font-size: 14px;
 		&[aria-current='page'] {
 			font-weight: 900;
-			border-bottom: 3px solid #e3cb1e;
+			border-bottom: 3px solid var(--token);
 		}
 	}
 `;

@@ -16,7 +16,7 @@ const theme = css`
     --article-color: #c6c6c6;
     --header-bg: rgba(19,20,21,0.8);
     --gray-alpha: rgba(0, 0, 0, 0.95);
-    --token: #999;
+    --token: #e3cb1e;
     --border-color: #3d3d3d;
     --button-index:#1a1a1a;;
     --mark:#1f1f1f;
@@ -40,7 +40,7 @@ const theme = css`
    --article-color: #464646;
    --header-bg: rgba(255,255,255,0.8);
    --gray-alpha: rgba(255,255,255,0.95);
-   --token: #666;
+   --token: #ae9a0c;
    --border-color: #e4e4e4;
    --nav-link: rgba(0,0,0,.5);
 }

@@ -82,11 +82,11 @@ export const Article = styled.article`
 		line-height: 59px;
 	}
 	h5 {
-		color: #827307;
-		font-weight: 300;
+		color: var(--token);
+		font-weight: 500;
 		letter-spacing: 0;
 		line-height: 1.4;
-		font-size: 12px;
+		font-size: 13px;
 		margin: 1.3rem 0;
 	}
 	p {
