@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { Article, ActionPanel } from './';
 import Layout from '../components/layout/index';
 import styled from 'styled-components';
@@ -32,14 +32,19 @@ const ResumePage = () => {
 							user no matter the Technicality. I call it Conceptual Minimalism.
 						</p>
 						<ActionPanel className="d-md-flex d-block">
-							<Link
+							<AniLink
 								className="btn btn-outline-black"
 								aria-label="Go To Projects Page."
 								role="button"
 								to="/contact"
+								swipe
+								duration={0.5}
+								direction="left"
+								top="entry"
+								entryOffset={80}
 							>
 								Contact Me
-							</Link>
+							</AniLink>
 							<a
 								className="btn btn-black"
 								aria-label="View and download resume."

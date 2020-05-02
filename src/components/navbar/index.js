@@ -2,8 +2,8 @@ import React from 'react';
 import { Navbar, Nav, Form } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import Logo from '../../assets/images/logo.svg';
-import { Link } from 'gatsby';
 
 const NavLayout = ({ setTheme, theme }) => {
 	return (
@@ -14,19 +14,49 @@ const NavLayout = ({ setTheme, theme }) => {
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav">
 				<Nav className="ml-auto">
-					<Nav.Link as={Link} to="/">
+					<Nav.Link
+						as={AniLink}
+						paintDrip
+						duration={0.5}
+						hex={theme ? '#131313' : '#f1f1f1'}
+						to="/"
+					>
 						Home
 					</Nav.Link>
-					<Nav.Link as={Link} to="/about">
+					<Nav.Link
+						as={AniLink}
+						paintDrip
+						duration={0.5}
+						hex={theme ? '#131313' : '#f1f1f1'}
+						to="/about"
+					>
 						About Me
 					</Nav.Link>
-					<Nav.Link as={Link} to="/project">
+					<Nav.Link
+						as={AniLink}
+						paintDrip
+						duration={0.5}
+						hex={theme ? '#131313' : '#f1f1f1'}
+						to="/project"
+					>
 						Projects
 					</Nav.Link>
-					<Nav.Link as={Link} to="/resume">
+					<Nav.Link
+						as={AniLink}
+						paintDrip
+						duration={0.5}
+						hex={theme ? '#131313' : '#f1f1f1'}
+						to="/resume"
+					>
 						Resume
 					</Nav.Link>
-					<Nav.Link as={Link} to="/contact">
+					<Nav.Link
+						as={AniLink}
+						paintDrip
+						duration={0.5}
+						hex={theme ? '#131313' : '#f1f1f1'}
+						to="/contact"
+					>
 						Contact Me
 					</Nav.Link>
 					<Nav.Link

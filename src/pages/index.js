@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout/index';
 import Img from 'gatsby-image';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const IndexPage = () => {
 	const data = useStaticQuery(graphql`
@@ -40,22 +41,32 @@ const IndexPage = () => {
 							</p>
 
 							<ActionPanel className="d-md-flex d-block">
-								<Link
+								<AniLink
 									className="btn btn-outline-black"
 									aria-label="Go To Projects Page."
 									role="button"
+									swipe
+									duration={0.5}
+									direction="left"
 									to="/project"
+									top="entry"
+									entryOffset={80}
 								>
 									View Projects
-								</Link>
-								<Link
+								</AniLink>
+								<AniLink
 									className="btn btn-black"
-									aria-label="View and download resume."
+									aria-label="View and learn more about me"
 									role="button"
-									to="/resume"
+									to="/about"
+									swipe
+									duration={0.5}
+									direction="left"
+									top="entry"
+									entryOffset={80}
 								>
-									Download Resume
-								</Link>
+									Learn More
+								</AniLink>
 							</ActionPanel>
 						</Article>
 					</div>
@@ -85,7 +96,7 @@ export const Article = styled.article`
 		color: var(--token);
 		font-weight: 500;
 		letter-spacing: 0;
-		line-height: 1.4;
+		line-height: 1.6;
 		font-size: 13px;
 		margin: 1.3rem 0;
 	}

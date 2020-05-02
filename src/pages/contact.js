@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Article, ActionPanel } from './';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import Layout from '../components/layout/index';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
@@ -68,9 +69,17 @@ const ContactPage = () => {
 									<button type="submit" className="btn btn-outline-black">
 										Send Message
 									</button>
-									<Link className="btn btn-black" to="/about">
+									<AniLink
+										className="btn btn-black"
+										swipe
+										duration={0.5}
+										direction="right"
+										top="entry"
+										entryOffset={80}
+										to="/about"
+									>
 										About me
-									</Link>
+									</AniLink>
 								</ActionPanel>
 							</ContactForm>
 						</Article>

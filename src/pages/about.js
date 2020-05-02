@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { Article, ActionPanel } from './';
 import Layout from '../components/layout/index';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 const AboutPage = () => (
 	<Layout
@@ -33,20 +33,32 @@ const AboutPage = () => (
 						can be convincing enough.
 					</p>
 					<ActionPanel className="d-md-flex d-block">
-						<Link
+						<AniLink
 							className="btn btn-outline-black"
 							aria-label="Go To Projects Page."
 							role="button"
+							to="/project"
+							swipe
+							duration={0.5}
+							direction="left"
+							top="entry"
+							entryOffset={80}
 						>
 							View Projects
-						</Link>
-						<Link
+						</AniLink>
+						<AniLink
 							className="btn btn-black"
 							aria-label="View and download resume."
 							role="button"
+							to="/resume"
+							swipe
+							duration={0.5}
+							direction="left"
+							top="entry"
+							entryOffset={80}
 						>
 							Download Resume
-						</Link>
+						</AniLink>
 					</ActionPanel>
 				</Article>
 			</div>

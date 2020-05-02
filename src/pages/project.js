@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { Article, ActionPanel } from './';
 import Layout from '../components/layout/index';
 
@@ -29,14 +29,19 @@ const ProjectsPage = () => (
 						<p></p>
 					</article>
 					<ActionPanel className="d-md-flex d-block">
-						<Link
+						<AniLink
 							className="btn btn-outline-black"
 							aria-label="Go To Projects Page."
 							role="button"
 							to="/contact"
+							swipe
+							duration={0.5}
+							direction="left"
+							top="entry"
+							entryOffset={80}
 						>
 							Say Hi
-						</Link>
+						</AniLink>
 
 						<a
 							className="btn btn-black"
