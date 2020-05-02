@@ -82,12 +82,12 @@ export const BodyStyling = createGlobalStyle`
 ${theme}
 
 ::selection {
-  background: var(--token);
+  background: var(--cw);
   color: #fff;
   /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
-  background: var(--token);
+  background: var(--cw);
   color: #fff;
   /* Gecko Browsers */
 }
