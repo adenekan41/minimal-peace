@@ -8,6 +8,7 @@ import Biro from '../../assets/images/biro.svg';
 import NavLayout from '../navbar';
 import SEO from '../seo';
 import styled from 'styled-components';
+import SkipToMain from '../a11y/skip-to-main';
 
 const Layout = ({
 	children,
@@ -50,10 +51,11 @@ const Layout = ({
 			<PageMask>
 				<h3 aria-hidden="true">{pageMask}</h3>
 			</PageMask>
+			<SkipToMain content="main" />
 			<PageWrapper>
 				<NavLayout setTheme={setTheme} theme={theme} />
 
-				<Wrapper>
+				<Wrapper id="main" tab-index="-1">
 					<Biro className="svg__pen" />
 					<WrapperTablet className={`animated fadeIn`}>
 						{/* {wake && <p className="tap__wake">Tap To Wake</p>} */}
@@ -98,7 +100,7 @@ const PageWrapper = styled.div`
 
 const PageMask = styled.figure`
 	position: fixed;
-	bottom: -3rem;
+	bottom: 0rem;
 	margin: 0;
 	right: 0;
 	h3 {

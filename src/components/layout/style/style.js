@@ -86,6 +86,7 @@ ${theme}
   color: #fff;
   /* WebKit/Blink Browsers */
 }
+
 ::-moz-selection {
   background: var(--cw);
   color: #fff;
@@ -122,6 +123,7 @@ body {
   padding-right: 0px !important;
   font-family: "Blorado", sans-serif; 
   margin:0;
+
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -moz-osx-font-smoothing:grayscale;
     -webkit-font-smoothing: antialiased;
@@ -149,6 +151,7 @@ a, h1, h2, h3, h4, h5, h6, p, button, input[type=text], input[type=date], input[
 }
 a{
   cursor: pointer;
+
   p{
     cursor: pointer;
   }
