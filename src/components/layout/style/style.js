@@ -127,13 +127,13 @@ a{
 
 .btn-black {
   background-color: var(--cw);
-  color: var(--bg);
+  color: var(--bg) !important;
   border-radius: 1px;
   font-size: 15px;
 }
 .btn-outline-black {
   border: 1px solid var(--cw);
-  color: var(--cw);
+  color: var(--cw) !important;
   border-radius: 1px;
   font-size: 15px;
 }

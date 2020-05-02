@@ -11206,22 +11206,6 @@ a.text-dark:hover {
 	}
 }
 
-/*# sourceMappingURL=bootstrap.min.css.map */
-
-@charset "UTF-8";
-
-/*!
- * animate.css -https://daneden.github.io/animate.css/
- * Version - 3.7.2
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2019 Daniel Eden
- */
-
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
 @-webkit-keyframes fadeInUp {
 	from {
 		opacity: 0;
@@ -11255,10 +11239,6 @@ a.text-dark:hover {
 	animation-name: fadeInUp;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
 .animated {
 	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
@@ -11275,4 +11255,29 @@ a.text-dark:hover {
 		-webkit-animation-iteration-count: 1 !important;
 		animation-iteration-count: 1 !important;
 	}
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
 }

@@ -12,19 +12,22 @@ const NavLayout = () => {
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
 			<Navbar.Collapse id="basic-navbar-nav">
 				<Nav className="ml-auto">
-					<Nav.Link as={Link} to="/home">
+					<Nav.Link as={Link} to="/">
 						Home
 					</Nav.Link>
-					<Nav.Link as={Link} to="/link">
+					<Nav.Link as={Link} to="/about">
 						About Me
 					</Nav.Link>
-					<Nav.Link as={Link} to="/link">
+					<Nav.Link
+						href="https://www.notion.so/Adenekan-Peace-d3b46c20a1d548458a0b5a4ec831bc45"
+						target="_blank"
+					>
 						Projects
 					</Nav.Link>
-					<Nav.Link as={Link} to="/link">
-						Articles
+					<Nav.Link as={Link} to="/resume">
+						Resume
 					</Nav.Link>
-					<Nav.Link as={Link} to="/link">
+					<Nav.Link as={Link} to="/contact">
 						Contact Me
 					</Nav.Link>
 				</Nav>
@@ -35,13 +38,21 @@ const NavLayout = () => {
 
 const NavWrapper = styled(Navbar)`
 	padding: 1.5em 6em;
-	background: var(--bg) !important;
+	background: transparent !important;
 	@media (max-width: 768px) {
 		padding: 0.5rem 1rem;
+	}
+	.navbar-toggler {
+		border: none;
 	}
 	.nav-link {
 		color: var(--cw) !important;
 		padding: 0.5rem 1.5rem !important;
+		font-size: 14px;
+		&[aria-current='page'] {
+			font-weight: 900;
+			border-bottom: 3px solid #e3cb1e;
+		}
 	}
 `;
 
