@@ -19,8 +19,8 @@ const IndexPage = () => {
 	`);
 	return (
 		<Layout
-			title="Home"
-			description="Product Designer, Visual Designer and Brand Analyst"
+			title="Home | Minimalist Peace"
+			description="I believe design psychology and extensive/detailed research can be used to create stunning interfaces that users can easily interact with no matter the Design Technicality. I call it Conceptual Minimalism."
 		>
 			<HomeWrapper>
 				<div className="row align-items-center">
@@ -35,9 +35,9 @@ const IndexPage = () => {
 							</h5>
 							<p>
 								I believe design psychology and extensive/detailed research can
-								be used to create stunning interfaces that user can easily
-								interact with user no matter the Design Techniclaity. I call it{' '}
-								<b>Conceptual Minimalism.</b>
+								be used to create stunning interfaces that users can easily
+								interact with no matter the Design Technicality. I call it{' '}
+								<b>Conceptual Minimalism</b>.
 							</p>
 
 							<ActionPanel className="d-md-flex d-block">

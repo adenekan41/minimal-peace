@@ -92,7 +92,7 @@ const Wrapper = styled.main`
 `;
 
 const PageWrapper = styled.div`
-	background: linear-gradient(90deg, var(--bg) 51%, var(--bg-sec) 30%);
+	background: linear-gradient(90deg, var(--bg) 50%, var(--bg-sec) 30%);
 	@media (max-width: 1024px) {
 		background: var(--bg);
 	}
@@ -118,7 +118,7 @@ const PageMask = styled.figure`
 const WrapperTablet = styled.div`
 	border: 5px solid silver;
 	border-radius: 2.39em;
-	min-width: 80vw;
+	width: 76vw;
 	padding: 4rem;
 	overflow: hidden;
 	min-height: 85vh;

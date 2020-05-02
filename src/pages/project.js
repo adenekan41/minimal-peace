@@ -26,7 +26,13 @@ const ProjectsPage = () => (
 						Approachability{' '}
 					</p>
 					<article>
-						<p></p>
+						<p>
+							<a href="https://linkedin.com/in/peacevisuals">Linkedin</a> |
+							{'  '}
+							<a href="https://behance.net/ifepeace828e">Behance</a> |{'  '}
+							<a href=" https://twitter.com/minimal_peace">Twitter</a> |{'  '}
+							<a href="https://dribbble.com/peace_visuals">Dribbble</a>
+						</p>
 					</article>
 					<ActionPanel className="d-md-flex d-block">
 						<AniLink
