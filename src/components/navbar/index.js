@@ -8,7 +8,13 @@ import Logo from '../../assets/images/logo.svg';
 const NavLayout = ({ setTheme, theme }) => {
 	return (
 		<NavWrapper bg="light" expand="lg">
-			<Navbar.Brand href="#home">
+			<Navbar.Brand
+				as={AniLink}
+				paintDrip
+				duration={0.5}
+				hex={theme ? '#131313' : '#f1f1f1'}
+				to="/"
+			>
 				<Logo />
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls="basic-navbar-nav" />
