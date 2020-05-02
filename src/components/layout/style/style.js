@@ -1,5 +1,51 @@
-import { createGlobalStyle } from 'styled-components';
-
+import { createGlobalStyle, css } from 'styled-components';
+const theme = css`
+	${(props) =>
+		props.theme
+			? `
+  // @desc Dark Theme
+  :root {
+    --bg: #090909;
+    --bg-sec: #131313;
+    --invert: 1;
+    --theme-amount: 1;
+    --cw: #f6f6f6;
+    --gray: #a8a8a8;
+    --light-gray: #444;
+    --lighter-gray: #222;
+    --article-color: #c6c6c6;
+    --header-bg: rgba(19,20,21,0.8);
+    --gray-alpha: rgba(0, 0, 0, 0.95);
+    --token: #999;
+    --border-color: #3d3d3d;
+    --button-index:#1a1a1a;;
+    --mark:#1f1f1f;
+    --nav-link: rgba(255, 255, 255, 0.8);
+}
+  `
+			: `
+  // @desc Light Theme
+  :root {
+    --bg: #fff;
+    --bg-sec: #f1f1f1;
+   --button-index:#eeeeee;
+   --cw: #2A2A2A;
+   --invert:0; 
+   --mark: #e9e9e9;
+   --theme-amount:0;
+   --border-color: #2e2e2e;
+   --gray: #888;
+   --light-gray: #dedede;
+   --lighter-gray: #f5f5f5;
+   --article-color: #464646;
+   --header-bg: rgba(255,255,255,0.8);
+   --gray-alpha: rgba(255,255,255,0.95);
+   --token: #666;
+   --border-color: #e4e4e4;
+   --nav-link: rgba(0,0,0,.5);
+}
+  `}
+`;
 export const BodyStyling = createGlobalStyle`
 
 
@@ -33,24 +79,7 @@ export const BodyStyling = createGlobalStyle`
   font-display: swap;
 }
 
-:root {
-   --bg: #fff;
-   --button-index:#eeeeee;
-   --cw: #2A2A2A;
-   --invert:0; 
-   --mark: #f6f6f6;
-   --theme-amount:0;
-   --border-color: #2e2e2e;
-   --gray: #888;
-   --light-gray: #dedede;
-   --lighter-gray: #f5f5f5;
-   --article-color: #464646;
-   --header-bg: rgba(255,255,255,0.8);
-   --gray-alpha: rgba(255,255,255,0.95);
-   --token: #666;
-   --border-color: #e4e4e4;
-   --nav-link: rgba(0,0,0,.5);
-}
+${theme}
 
 ::selection {
   background: var(--token);

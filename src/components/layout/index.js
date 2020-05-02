@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { BodyStyling } from './style/style';
 
@@ -17,23 +17,45 @@ const Layout = ({
 	title,
 	pageMask = 'Design',
 }) => {
-	const [wake, setWake] = useState(true);
+	const [theme, updateTheme] = useState(false);
+
+	const loadTheme = useCallback(() => {
+		if (theme === false) {
+			localStorage.removeItem('THEME', 1);
+		} else {
+			localStorage.setItem('THEME', 1);
+		}
+	}, [theme]);
+
+	const setTheme = () => {
+		updateTheme(!theme);
+		loadTheme();
+	};
+
+	useEffect(() => {
+		updateTheme(localStorage.getItem('THEME') ? true : false);
+	}, [updateTheme]);
+
+	const didMountRef = useRef(false);
+	useEffect(() => {
+		if (didMountRef.current) {
+			loadTheme();
+		} else didMountRef.current = true;
+	}, [theme, loadTheme]);
+
 	return (
 		<>
 			<SEO description={description} lang={lang} meta={meta} title={title} />
-			<BodyStyling />
+			<BodyStyling theme={theme} />
 			<PageMask>
-				<h3 aria-Hidden="true">{pageMask}</h3>
+				<h3 aria-hidden="true">{pageMask}</h3>
 			</PageMask>
 			<PageWrapper>
-				<NavLayout />
+				<NavLayout setTheme={setTheme} theme={theme} />
 
 				<Wrapper>
 					<Biro className="svg__pen" />
-					<WrapperTablet
-						onClick={() => setWake(false)}
-						className={`animated fadeIn`}
-					>
+					<WrapperTablet className={`animated fadeIn`}>
 						{/* {wake && <p className="tap__wake">Tap To Wake</p>} */}
 						<div
 							className={`animated fadeIn container`}
@@ -68,7 +90,7 @@ const Wrapper = styled.main`
 `;
 
 const PageWrapper = styled.div`
-	background: linear-gradient(90deg, white 51%, #f1f1f1 30%);
+	background: linear-gradient(90deg, var(--bg) 51%, var(--bg-sec) 30%);
 	@media (max-width: 1024px) {
 		background: var(--bg);
 	}
@@ -82,7 +104,7 @@ const PageMask = styled.figure`
 	h3 {
 		user-select: none;
 		opacity: 0.8;
-		color: #e9e9e9;
+		color: var(--mark);
 		font-size: 400px;
 		margin: 0;
 		font-weight: 900;

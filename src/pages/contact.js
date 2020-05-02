@@ -29,10 +29,13 @@ const ContactPage = () => {
 					<div className="col-md-6">
 						<Article>
 							<h1>Contact Me</h1>
-							<h5>
+							<p className="my-3">
 								Get in touch or mail me directly on Ifepeace@rocketmail.com
-							</h5>
-							<ContactForm>
+							</p>
+							<ContactForm
+								action="https://formspree.io/ifepeace@rocketmail.com"
+								method="POST"
+							>
 								<input
 									type="text"
 									className="form-control"
@@ -65,7 +68,9 @@ const ContactPage = () => {
 									<button type="submit" className="btn btn-outline-black">
 										Send Message
 									</button>
-									<Link className="btn btn-black">View Project</Link>
+									<Link className="btn btn-black" to="/about">
+										About me
+									</Link>
 								</ActionPanel>
 							</ContactForm>
 						</Article>

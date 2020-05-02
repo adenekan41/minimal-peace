@@ -1,9 +1,11 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Form } from 'react-bootstrap';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Logo from '../../assets/images/logo.svg';
 import { Link } from 'gatsby';
-const NavLayout = () => {
+
+const NavLayout = ({ setTheme, theme }) => {
 	return (
 		<NavWrapper bg="light" expand="lg">
 			<Navbar.Brand href="#home">
@@ -18,10 +20,7 @@ const NavLayout = () => {
 					<Nav.Link as={Link} to="/about">
 						About Me
 					</Nav.Link>
-					<Nav.Link
-						href="https://www.notion.so/Adenekan-Peace-d3b46c20a1d548458a0b5a4ec831bc45"
-						target="_blank"
-					>
+					<Nav.Link as={Link} to="/project">
 						Projects
 					</Nav.Link>
 					<Nav.Link as={Link} to="/resume">
@@ -30,6 +29,17 @@ const NavLayout = () => {
 					<Nav.Link as={Link} to="/contact">
 						Contact Me
 					</Nav.Link>
+					<Nav.Link
+						as={Form.Check}
+						type="switch"
+						onChange={() => {
+							setTheme();
+						}}
+						checked={theme}
+						id="custom-switch"
+						className="ml-md-4"
+						label="Dark Mode"
+					></Nav.Link>
 				</Nav>
 			</Navbar.Collapse>
 		</NavWrapper>
@@ -44,6 +54,14 @@ const NavWrapper = styled(Navbar)`
 	}
 	.navbar-toggler {
 		border: none;
+		&-icon {
+			filter: invert(var(--invert));
+		}
+	}
+	.custom-control-input:checked ~ .custom-control-label::before {
+		color: var(--cw) !important;
+		border-color: #e3cb1e;
+		background-color: #e3cb1e;
 	}
 	.nav-link {
 		color: var(--cw) !important;
@@ -56,4 +74,8 @@ const NavWrapper = styled(Navbar)`
 	}
 `;
 
+NavLayout.propTypes = {
+	setTheme: PropTypes.func,
+	theme: PropTypes.bool,
+};
 export default NavLayout;

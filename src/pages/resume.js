@@ -36,8 +36,9 @@ const ResumePage = () => {
 								className="btn btn-outline-black"
 								aria-label="Go To Projects Page."
 								role="button"
+								to="/contact"
 							>
-								View Projects
+								Contact Me
 							</Link>
 							<a
 								className="btn btn-black"

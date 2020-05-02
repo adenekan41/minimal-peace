@@ -14,10 +14,7 @@ const AboutPage = () => (
 			<div className="col-md-6">
 				<Article>
 					<h1>About Me</h1>
-					<h5>
-						A 2 year + Product Designer, Visual/Graphic Designer and Brand
-						Analyst. Born in Lagos, Nigeria.
-					</h5>
+					<h5>Product Designer, Visual Designer and Brand Analyst</h5>
 					<p>
 						Hi My name is Adenekan Peace, I am a lover of pure human design
 						derieved from critical reasearch and detailed implementation of

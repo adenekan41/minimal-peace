@@ -44,6 +44,7 @@ const IndexPage = () => {
 									className="btn btn-outline-black"
 									aria-label="Go To Projects Page."
 									role="button"
+									to="/project"
 								>
 									View Projects
 								</Link>
@@ -51,6 +52,7 @@ const IndexPage = () => {
 									className="btn btn-black"
 									aria-label="View and download resume."
 									role="button"
+									to="/resume"
 								>
 									Download Resume
 								</Link>
@@ -103,7 +105,7 @@ export const ActionPanel = styled.div`
 	a,
 	button {
 		padding: 10px 25px;
-		font-weight: 400;
+		font-weight: 500;
 		font-size: 14px;
 		margin-right: 0.8rem;
 
