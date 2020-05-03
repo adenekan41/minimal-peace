@@ -108,6 +108,10 @@ export const Article = styled.article`
 		font-weight: 500;
 		letter-spacing: 0;
 		line-height: 1.65;
+		a {
+			font-weight: 900;
+			color: var(--token);
+		}
 	}
 `;
 

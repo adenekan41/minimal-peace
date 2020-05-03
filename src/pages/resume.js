@@ -22,8 +22,7 @@ const ResumePage = () => {
 					<Article>
 						<h1>My Resume</h1>
 						<h5>
-							A 2 year + Product Designer, Visual/Graphic Designer and Brand
-							Analyst. Born in Lagos, Nigeria.
+							Product Designer | Critical UX Researcher | Growth Enthusiast
 						</h5>
 						<p>
 							I am a critical UX designer that uses design psychology and

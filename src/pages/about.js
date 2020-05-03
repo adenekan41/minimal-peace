@@ -22,7 +22,7 @@ const AboutPage = () => {
 		<Layout
 			title="About Me"
 			pageMask="About"
-			description="A 2 year + Product Designer, Visual/Graphic Designer and Brand Analyst.
+			description="Product Designer, Visual/Graphic Designer and Brand Analyst.
   Born in Lagos, Nigeria."
 		>
 			<div className="row align-items-center">
@@ -92,10 +92,12 @@ const AboutPage = () => {
 
 export const AboutWrapper = styled.div`
 	.gatsby-image-wrapper {
-		position: relative;
-		overflow: hidden;
-		width: 85%;
+		width: 90%;
+		height: 34rem;
+		clip-path: circle(15em);
 		margin: auto;
+		background: var(--mark);
+		border-radius: 50%;
 	}
 `;
 export default AboutPage;
