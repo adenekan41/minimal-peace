@@ -1013,7 +1013,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.4.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.4.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.6":
   version "7.9.6"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.9.6.tgz#a9102eb5cadedf3f31d08a9ecf294af7827ea29f"
   integrity sha512-64AF1xY3OAkFHqOb9s4jpgk1Mm5vDZ4L3acHvAml+53nO1XbXLuDodsVpO4OIUsmemlUHMxNdYMNJmsvOwLrvQ==
@@ -5929,6 +5929,15 @@ gatsby-core-utils@^1.2.0:
     configstore "^5.0.1"
     node-object-hash "^2.0.0"
 
+gatsby-core-utils@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.2.1.tgz#9d5e89d0cf7b9e5d7d77a9dcb47071684f68ffd5"
+  integrity sha512-uyXgjvKdzfJ0yB8oTYmBjMUqM0AACx7aA8Ioubn6k/51C4tE5+LzrG/iG42di2UaTIbcBj6vcwrvRosNKWeeBQ==
+  dependencies:
+    ci-info "2.0.0"
+    configstore "^5.0.1"
+    node-object-hash "^2.0.0"
+
 gatsby-graphiql-explorer@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-0.4.0.tgz#1efe626ba7406f0f39784d0d971e3d27b305644c"
@@ -5978,14 +5987,14 @@ gatsby-plugin-manifest@^2.4.0:
     semver "^5.7.1"
     sharp "^0.25.1"
 
-gatsby-plugin-offline@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.2.0.tgz#835273d48238ff751e7accf40995e9058bc6c75f"
-  integrity sha512-Wo7QrsPDcecA95X4cFi4vmFAi18Yfxii2BdEZEtR3IdqQr1/c8jyDZgR2fV7I/13ifIASXrp03jZd+J1xK91JA==
+gatsby-plugin-offline@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.2.1.tgz#67d04c9915e9852544fbc935c4751b578cae88bf"
+  integrity sha512-b2JZJrp7Xq2XY2/vmP+MviDq0nr07fAsqhAz5ApI0G11yEsyqCwEKLDYKsHuZ4rgM7p69wncQNa/WpluCWUUsw==
   dependencies:
-    "@babel/runtime" "^7.9.2"
+    "@babel/runtime" "^7.9.6"
     cheerio "^1.0.0-rc.3"
-    gatsby-core-utils "^1.2.0"
+    gatsby-core-utils "^1.2.1"
     glob "^7.1.6"
     idb-keyval "^3.2.0"
     lodash "^4.17.15"

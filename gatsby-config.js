@@ -18,7 +18,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-react-svg',
 			options: {
 				rule: {
-					include: /assets/, // See below to configure properly
+					include: /assets/,
 				},
 			},
 		},
@@ -28,17 +28,22 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `Peace Visuals`,
+				name: `Minimalist Peace`,
 				short_name: `Peace`,
 				start_url: `/`,
 				background_color: `#000000`,
 				theme_color: `#000000`,
-				display: `minimal-ui`,
+				display: `standalone`,
 				icon: `src/assets/images/peace.png`, // This path is relative to the root of the site.
 			},
 		},
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
-		// `gatsby-plugin-offline`,
+		{
+			resolve: 'gatsby-plugin-offline',
+			options: {
+				workboxConfig: {
+					globPatterns: ['**/*'],
+				},
+			},
+		},
 	],
 };

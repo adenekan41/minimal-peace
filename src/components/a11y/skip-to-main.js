@@ -6,7 +6,7 @@ const SkipToMain = ({ content = '0' }) => {
 	return (
 		<Wrapper>
 			<a
-				class="skip-main animated fadeIn"
+				className="skip-main animated fadeIn"
 				href={'#' + content}
 				aria-label="Skip navigation and go to main content"
 			>

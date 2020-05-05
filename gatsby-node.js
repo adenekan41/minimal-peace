@@ -1,7 +1,8 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
+// Promise API
+exports.createPages = () => {
+	return new Promise((resolve, reject) => {});
+};
+// Callback API
+exports.createPages = (_, pluginOptions, cb) => {
+	cb();
+};

@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  Peace Visuals
+  The Minimalist Peace
 </h1>
 <p align="center">Product Designer, Visual Designer and Brand Analyst</p>
 <br /><br />
