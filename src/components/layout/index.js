@@ -121,6 +121,7 @@ const WrapperTablet = styled.div`
 	width: 76vw;
 	padding: 4rem;
 	overflow: hidden;
+	height: 500px;
 	min-height: 85vh;
 	position: relative;
 	box-shadow: 22px 19px 20px -6px #0e0e0e70;
